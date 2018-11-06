@@ -30,3 +30,8 @@
     transform: rotate(360deg);
   }
 } */
+
+.App-header {
+  display: flex;
+  justify-content: space-evenly;
+}

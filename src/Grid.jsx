@@ -65,7 +65,10 @@ class Grid extends React.PureComponent {
     }
 
     return(
-      array
+      <div className="Grid">
+
+      {array}
+      </div>
     )
   }
 };
