@@ -20,8 +20,8 @@ class Grid extends React.PureComponent {
   componentDidMount() {
     // setInterval(this.props.fetchBots, 1000);
     // setInterval(this.props.fetchNodes, 1000);
-    // this.props.fetchBots();
-    // this.props.fetchNodes();
+    this.props.fetchBots();
+    this.props.fetchNodes();
   }
   render () {
     if (!this.props.bots) {

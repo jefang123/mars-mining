@@ -3,18 +3,32 @@ import $ from 'jquery';
 export const fetchBots= () => {
   return $.ajax({
     crossDomain: true,
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    // xhrFields: {
+    //   withCredentials: true,
+    //   port: 80
+    // },
     method: 'GET',
-    dataType: 'jsonp',
-    url: 'headlight-tournament-4.herokuapp.com/bots'
+    dataType: 'json',
+    url: 'https://headlight-tournament-3.herokuapp.com/bots'
   });
 };
 
 export const fetchNodes = () => {
   return $.ajax({
-    rossDomain: true,
+    crossDomain: true,
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    // xhrFields: {
+    //   withCredentials: true,
+    //   port: 80
+    // },
     method: 'GET',
-    dataType: 'jsonp',
-    url: 'headlight-tournament-4.herokuapp.com/nodes'
+    dataType: 'json',
+    url: 'https://headlight-tournament-3.herokuapp.com/nodes'
   });
 };
 
