@@ -1,21 +1,35 @@
 .Grid {
-  text-align: center;
+  margin: auto;
   width: 800px;
   height: 800px;
+  border: 1px solid black;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .white {
-
+  width: 38px;
+  height: 38px;
+  border: 1px solid black;
 }
 
 .red {
-
+  width: 38px;
+  height: 38px;
+  border: 1px solid black;
+  background-color: red;
 }
 
 .blue {
-
+  width: 38px;
+  height: 38px;
+  border: 1px solid black;
+  background-color: blue;
 }
 
 .purple {
-  
+  width: 38px;
+  height: 38px;
+  border: 1px solid black;
+  background-color: purple;
 }
