@@ -31,7 +31,7 @@ export const fetchNodes = () => {
   return dispatch => {
     return APINodes.fetchNodes().then(
       nodes => {
-        return disptach(receiveNodes(nodes))
+        return dispatch(receiveNodes(nodes))
       }
     );
   };
