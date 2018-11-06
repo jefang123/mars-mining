@@ -1,11 +1,11 @@
 import React from 'react';
 import './Grid.css';
 
-const GRID = new Array(20);
-for (var i = 0; i < GRID.length; i++) {
-  GRID[i] = new Array(20);
-  GRID[i].fill(null)
-}
+// const GRID = new Array(20);
+// for (var i = 0; i < GRID.length; i++) {
+//   GRID[i] = new Array(20);
+//   GRID[i].fill(null)
+// }
 
 
 class Grid extends React.PureComponent {
@@ -18,21 +18,39 @@ class Grid extends React.PureComponent {
   }
 
   componentDidMount() {
-    // setInterval(this.props.fetchBots, 1000);
-    // setInterval(this.props.fetchNodes, 1000);
-    this.props.fetchBots();
-    this.props.fetchNodes();
+    setInterval(this.props.fetchBots, 1000);
+    setInterval(this.props.fetchNodes, 1000);
+    // this.props.fetchBots();
+    // this.props.fetchNodes();
   }
   render () {
     if (!this.props.bots) {
       return null
     }
-    // let bots = this.props.bots
-    // let nodes = this.props.nodes 
+
+    const GRID = new Array(20);
+    for (var i = 0; i < GRID.length; i++) {
+      GRID[i] = new Array(20);
+      GRID[i].fill(null)
+    }
+    let bots = this.props.bots
+    let nodes = this.props.nodes 
 
     // bots.forEach(bot => {
     //   GRID[bot.X][bot.Y] = "blue"
     // })
+
+    for (var a = 0; a < bots.length; a++) {
+      GRID[bots[a].Location.X][bots[a].Location.Y] = 'blue'
+    }
+
+    for (var b = 0; b < nodes.length; b++) {
+      if (GRID[nodes[b].Location.X][nodes[b].Location.Y] === 'blue') {
+        GRID[nodes[b].Location.X][nodes[b].Location.Y] = 'purple'
+      } else {
+        GRID[nodes[b].Location.X][nodes[b].Location.Y] = 'red'
+      }
+    }
 
     // nodes.forEach(node =>{
     //   if (GRID[node.X][node.Y] === "blue") {
