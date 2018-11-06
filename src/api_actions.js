@@ -1,4 +1,4 @@
-import * as APINodes from './api_util.js';
+import * as APINodes from './api_util';
 
 export const RECEIVE_BOTS = 'RECEIVE_BOTS';
 export const RECEIVE_NODES = 'RECEIVE_NODES';
